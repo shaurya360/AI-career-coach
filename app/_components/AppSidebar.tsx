@@ -44,7 +44,7 @@ export function AppSidebar() {
         <Sidebar>
             <SidebarHeader>
                 <div className='p-4'>
-                    <Image src={'/logo.png'} alt='logo' width={100} height={70}
+                    <Image src={'/logo.jpg'} alt='logo' width={100} height={70}
                         className='w-full ' />
                     <h2 className='text-sm text-gray-400 text-center mt-3'>Build Awesome Skills </h2>
                 </div>

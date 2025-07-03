@@ -49,7 +49,7 @@ const RoadmapGeneratorDialog = ({openRoadmapDialog,setOpenRoadmapDialog}:any) =>
       </DialogDescription>
     </DialogHeader>
     <DialogFooter>
-        <Button variant={'outline'}>Cancel</Button>
+        <Button variant={'outline'} onClick={setOpenRoadmapDialog}>Cancel</Button>
             <Button onClick={GenerateRoadmap} disabled={loading || !userInput}>
              {loading?<Loader2 className='animate-spin'/>:'Generate Roadmap'}
             </Button>

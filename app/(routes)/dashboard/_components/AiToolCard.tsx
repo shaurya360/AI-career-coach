@@ -52,7 +52,7 @@ const AiToolCard = ({tool}:AiToolProps) => {
         <h2 className='font-bold mt-2'>{tool.name}</h2>
         <p className='text-gray-400'>{tool.desc}</p>
         <Button className='w-full mt-3' onClick={onClickButton}>{tool.button }</Button>
-        <ResumeUploadDialogue openResumeUpload={openResumeUpload} setOpenResumeUpload={setOpenResumeUpload} />
+        <ResumeUploadDialogue openResumeUpload={openResumeUpload} setOpenResumeUpload={()=>setOpenResumeUpload(false)} />
         <RoadmapGeneratorDialog openRoadmapDialog={openRoadmapDialog} setOpenRoadmapDialog={()=>setOpenRoadmapDialog(false)}/>
     </div>
   )

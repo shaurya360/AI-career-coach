@@ -22,21 +22,8 @@ const AiResumeAnalyzer = () => {
     }
     // console.log(aiReport);
   return (
-    // <div className='grid lg:grid-cols-5 grid-cols-1'>
-    //   <div className="col-span-2">
-    //   {aiReport ? (
-    //     <ResumeAnalysisPage data={aiReport} />
-    //   ) : (
-    //     <p className="text-gray-600 p-4">Loading resume analysis...</p>
-    //   )}
-    // </div>
-    //   <div className='col-span-3'>
-    //     <h2 className='font-bold text-4xl mb-3'>Resume Preview</h2>
-    //     <iframe src={pdfUrl+'#toolbar=0&&navpanes=0&&scrollbar=0'} width={'800'} height={1200} className='min-w-lg'style={{border:'none'}}></iframe>
-    //   </div>
-      
-    // </div>
-    <div className="grid lg:grid-cols-5 grid-cols-1 gap-4 p-4">
+    
+  <div className="grid lg:grid-cols-5 grid-cols-1 gap-4 p-4">
   {/* Left: Resume Analysis */}
   <div className="col-span-2 overflow-y-auto h-[calc(100vh-40px)] pr-4">
     {aiReport ? (
@@ -71,19 +58,22 @@ const AiResumeAnalyzer = () => {
   </div>
 
   {/* Right: Resume Preview */}
-  <div className="col-span-3 sticky top-4">
-  <h2 className="font-bold text-4xl mb-3">Resume Preview</h2>
-  <iframe
-    src={pdfUrl + "#toolbar=0&navpanes=0&scrollbar=1"}
-    width="100%"
-    height="1000"
-    className="w-full rounded-md shadow-md"
-    style={{
-      border: "none",
-      overflow: "auto",     // enable scroll only inside iframe
-      display: "block"
-    }}
-  />
+  <div className="col-span-1 md:col-span-3 sticky top-4"> {/* Changed col-span-3 to col-span-1 for mobile, md:col-span-3 for medium screens and up */}
+  <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl mb-3 text-center md:text-left">Resume Preview</h2> {/* Adjusted text size for responsiveness and added text alignment */}
+  <div className="relative" style={{ paddingBottom: '141.42%', height: 0, overflow: 'hidden' }}> {/* Aspect ratio container for responsive height */}
+    <iframe
+      src={pdfUrl + "#toolbar=0&navpanes=0&scrollbar=1"}
+      // Removed fixed height. The height will be controlled by the aspect ratio container.
+      width="100%"
+      // height="1000" // Removed this fixed height
+      className="absolute top-0 left-0 w-full h-full rounded-md shadow-md" // Absolute positioning within the relative container
+      style={{
+        border: "none",
+        overflow: "auto",
+        display: "block"
+      }}
+    />
+  </div>
 </div>
 </div>
   )

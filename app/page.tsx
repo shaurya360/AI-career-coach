@@ -15,7 +15,7 @@ export default function Home() {
         <nav className="relative  p-4 max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8" aria-label="Global">
           <div className="flex items-center justify-between">
             <div>
-              <Image src={'/logo.svg'} alt="logo" width={150} height={150} />
+              <Image src={'/logo.jpg'} alt="logo" width={250} height={250} />
             </div>
           </div>
           <div id="navbar-collapse-with-animation" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
@@ -54,7 +54,7 @@ export default function Home() {
 
           <div className="mt-5 max-w-3xl text-center mx-auto">
             <p className="text-lg text-gray-600 dark:text-neutral-400">
-              Detailed Resume Analyser,InDepth Roadmap and AI Guidance for every career level</p>
+              Detailed Resume Analyzer, Personalized Career Roadmap and AI Guidance for every problem</p>
           </div>
 
 

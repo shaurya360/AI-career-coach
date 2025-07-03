@@ -61,7 +61,7 @@ const onUpload=async ()=>{
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
-            <Button variant={'outline'}>Cancel</Button>
+            <Button variant={'outline'} onClick={setOpenResumeUpload}>Cancel</Button>
             <Button disabled={!file || loading} onClick={onUpload}>
             {loading?<Loader2Icon className="animate-spin"/>:'Upload'}
             </Button>

@@ -81,7 +81,7 @@ const ResumeAnalysisPage: React.FC<Props> = ({ data }) => {
       </div>
 
       {/* Section Cards */}
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {Object.entries(sections).map(([key, section]) => {
           const [bgClass, textClass] = getSectionColor(section.score).split(" ");
           return (
@@ -116,7 +116,7 @@ const ResumeAnalysisPage: React.FC<Props> = ({ data }) => {
       </div>
 
       {/* Summary Lists */}
-      <div className="grid grid-cols-2 gap-4">
+       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="border rounded-lg p-5 bg-green-50">
           <h4 className="font-semibold text-gray-800 mb-2">What's Good</h4>
           <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
@@ -136,12 +136,7 @@ const ResumeAnalysisPage: React.FC<Props> = ({ data }) => {
         </div>
       </div>
 
-      {/* Call to Action */}
-      <div className="rounded-xl p-6 text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md">
-        <h3 className="text-xl font-semibold mb-2">Ready to refine your resume? 💪</h3>
-        <p className="text-sm mb-4">Make your application stand out with our premium insights and features.</p>
-        <Button className="bg-white text-blue-600 hover:bg-blue-100">Upgrade to Premium</Button>
-      </div>
+      
     </div>
   );
 };
